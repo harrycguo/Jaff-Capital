@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException{
 
         File currentDirFile = new File("");
-        String csvFile = currentDirFile.getAbsolutePath() + "/5_output_terms1.csv";
+        String csvFile = currentDirFile.getAbsolutePath() + "/testing/5_output_terms1.csv";
         String line = "";
         String cvsSplitBy = ",";
 
@@ -37,7 +37,7 @@ public class Main {
 
         // init output csv file
 
-        PrintWriter pw = new PrintWriter(new File("output.csv"));
+        PrintWriter pw = new PrintWriter(new File("testing/output.csv"));
         StringBuilder sb = new StringBuilder();
         sb.append("ticker");
         sb.append(',');
@@ -54,8 +54,8 @@ public class Main {
             String[] split1 = line1.split(cvsSplitBy);
             String[] split2 = line2.split(cvsSplitBy);
 
-            String ticker = split1[0];
-            ticker = ticker.charAt(5) == '_' ? ticker.substring(1, 5): ticker.substring(1, 4);
+            String ticker = split2[0];
+            //ticker = ticker.charAt(5) == '_' ? ticker.substring(1, 5): ticker.substring(1, 4);
 
             Map<CharSequence, Integer> leftVector = new HashMap<>();
             Map<CharSequence, Integer> rightVector = new HashMap<>();
